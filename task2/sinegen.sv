@@ -6,7 +6,8 @@ module sinegen #(
     input logic rst,         // reset trigger
     input logic en,          // counter enable
     input logic [D_WIDTH-1:0] incr,
-    output logic [D_WIDTH-1:0] data_out   // output   
+    output logic [D_WIDTH-1:0] data_out1,   // output 1
+    output logic [D_WIDTH-1:0] data_out2   // output 2
 );
 
     logic [A_WIDTH-1:0] addr;
@@ -19,10 +20,13 @@ counter myCounter (
     .dout (addr)
 );
 
-rom myRom (
+rom myRom1 (
     .clk (clk),
-    .addr (addr),
-    .dout (data_out)
+    .addr1 (addr),
+    .dout1 (data_out1),
+    .addr2 (addr + incr),
+    .dout2 (data_out2)
 );
+
 
 endmodule

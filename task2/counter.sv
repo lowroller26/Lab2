@@ -11,6 +11,6 @@ module counter#(
 
 always_ff @ (posedge clk)
   if (rst) dout <= {WIDTH{1'b0}};
-  else     dout <= dout + incr;
+  else     dout <= dout + 8'b00000001;
 
 endmodule

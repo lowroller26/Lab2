@@ -39,7 +39,8 @@ int main(int argc, char **argv, char **env){
 
         // ++++ Send count value to Vbuddy
         sinegen->incr = vbdValue();
-        vbdPlot(int(sinegen->data_out), 0, 255);
+        vbdPlot(int(sinegen->data_out1), 0, 255);
+        vbdPlot(int(sinegen->data_out2), 0, 255);
         vbdCycle(i+1);
 
         // either simulation finished, or 'q' is pressed
