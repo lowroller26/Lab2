@@ -1,2 +1,2 @@
 For Lab2 task2 I edited rom.sv to allow for dual read port. I copied over the sinegen file from task 1 and edited the inputs to have a second data_out pin and modified the rom using address two as the input address + incr. This causes the apparent delay or phase shift between the two waves. Counter and the interactions with that needed no modifying and the testbench only needed me to add a second VBDPlot command for the second data_out.
-<p align="center"> <img src="images/Lab 2 task 2 evidence.jpg" /> </p>
+<p align="center"> <img src="Lab 2 task 2 evidence.jpg" /> </p>
